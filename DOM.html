@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Использование метода getElementById()</title>
+    <script>
+        function calculateMPG(miles, gallons) {
+            document.getElementById("displayMiles").
+            innerHTML = parseInt(miles);
+            document.getElementById("displayGallons").
+            innerHTML = parseInt(gallons);
+            document.getElementById("displayMPG").
+            innerHTML = miles / gallons;
+        }
+    </script>
+</head>
+
+<body>
+
+    <p>Вы проехали <span id="displayMiles">____</span>км.</p>
+    <p>Вы использовали<span id="displayGallons">____</span>литров бензина</p>
+    <p>Пробег на 1 л топлива<span id="displayMPG">____</span>км</p>
+    <script>
+        var milesDriven = prompt("Введите пробег (км)");
+        var gallonsGas = prompt("Введите расход бензина (л)");
+        calculateMPG(milesDriven, gallonsGas);
+    </script>
+</body>
+
+</html>

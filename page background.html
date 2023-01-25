@@ -9,7 +9,22 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="background1">
+            <h1>Первый фон</h1>
+            <script>
+                document.body.style.background = "yellow";
+            </script>
+        </div>
+        <div class="background2">
+            <h1>Второй фон</h1>
+            <script>
+                document.body.style.background = "green";
 
+                setInterval(() => document.body.style.background = "", 5000);
+            </script>
+        </div>
+    </div>
 </body>
 
 </html>
