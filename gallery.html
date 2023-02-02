@@ -5,21 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="gallery.css">
+
     <title>Gallery</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="item1"><img id="showPrevious" src="/1.jpg" alt="1">Image</div>
 
-        <div class="previous">
-            <button type="button" onclick="showPrevious()">Previous</button></div>
-        <div class="next">
-            <button type="button" onclick="showNext()">Next</button></div>
+    <img id="image" src="/2.jpg">
+
+    <div class="buttons">
+        <button type="button" onclick="showPrevious()">Previous</button>
+        <button type="button" onclick="showNext()">Next</button>
     </div>
 
-    <script src="/gallery.js">
+    <script>
+        let showPrevious = () => {
+            let image = document.getElementById("image");
+            image.src = '/2.jpg';
+            console.log(image);
+        }
+        let showNext = () => {
+            let image = document.getElementById("image");
+            image.src = '/3.jpg';
+            console.log(image);
+        }
     </script>
 </body>
 
